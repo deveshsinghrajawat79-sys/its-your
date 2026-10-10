@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Devi Jiii 🌷👑</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #f8c8dc;
+  --lavender: #d9c6ff;
+  --purple: #8055a5;
+  --dark: #493253;
+  --cream: #fff9fd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background:
+    radial-gradient(circle at 15% 15%, #ffe6f2, transparent 35%),
+    radial-gradient(circle at 85% 75%, #dcd0ff, transparent 35%),
+    linear-gradient(135deg, #fff5fb, #f1e9ff, #ffe5ef);
+  overflow-x: hidden;
+}
+
+#sky {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  color: white;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .25; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.float {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  z-index: 10;
+  animation: floatUp 7s linear forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(-115vh) rotate(360deg); opacity: 0; }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 92%);
+  margin: auto;
+  padding: 28px 0 50px;
+}
+
+.hero {
+  text-align: center;
+  padding: 38px 18px 30px;
+  border: 1px solid #ffffffc9;
+  border-radius: 28px;
+  background: #ffffff80;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 45px #9163a51c;
+}
+
+.time {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 30px;
+  background: #fff;
+  color: var(--purple);
+  font-size: 13px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px #ad7cb326;
+}
+
+.moon {
+  font-size: 48px;
+  margin: 18px 0 8px;
+  animation: moonGlow 2.5s infinite alternate;
+}
+
+@keyframes moonGlow {
+  from { filter: drop-shadow(0 0 3px #f5cae5); }
+  to { filter: drop-shadow(0 0 16px #d4a8ff); }
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(39px, 9vw, 65px);
+  line-height: 1.25;
+  color: #a34e86;
+  font-weight: 400;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.crown {
+  font-size: 32px;
+  margin-top: 12px;
+}
+
+.open-btn, .flower-btn {
+  border: none;
+  border-radius: 35px;
+  padding: 13px 23px;
+  margin-top: 23px;
+  background: linear-gradient(110deg, #d78ab5, #a58ae6);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 7px 20px #a56db542;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.open-btn:hover, .flower-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #a56db55c;
+}
+
+.message {
+  display: none;
+  margin-top: 24px;
+  padding: 25px 23px;
+  background: #fffafdf0;
+  border: 1px solid white;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px #79528d20;
+  animation: appear .9s ease;
+}
+
+.message.show { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message h2 {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 39px;
+  color: #ad568d;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.message p {
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 17px;
+  overflow-wrap: break-word;
+}
+
+.wishes {
+  padding: 16px;
+  margin: 18px 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff0f7, #f2edff);
+}
+
+.wishes p { margin-bottom: 10px; }
+
+.signature {
+  text-align: center;
+  font-weight: 600;
+  color: #a34e86;
+  padding-top: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px 10px 0;
+  font-size: 12px;
+  line-height: 2;
+  color: #805d89;
+}
+
+.flower {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin: 12px 0;
+}
+
+@media (max-width: 480px) {
+  main { width: 94%; padding-top: 15px; }
+  .hero { padding: 30px 14px; }
+  .message { padding: 22px 17px; }
+  .message p { font-size: 13px; line-height: 1.95; }
+  .message h2 { font-size: 35px; }
+}
+</style>
+</head>
+
+<body>
+<div id="sky"></div>
+
+<main>
+  <section class="hero">
+    <div class="time">✨ 12:00 AM · THE WAIT IS OVER 🌙</div>
+
+    <div class="moon">🌙✨</div>
+
+    <h1>Finallyyyyy!!!</h1>
+
+    <div class="crown">🥳🎂💖</div>
+
+    <p class="subtitle">
+      The wait is over... and the most special day<br>
+      of the most special person has finally arrived. 🌸👑💫
+    </p>
+
+    <h1 style="font-size:clamp(34px,8vw,49px);margin-top:18px">
+      Happy Birthday!
+    </h1>
+
+    <div class="crown">🌷 Devi Jiii 🌷</div>
+
+    <p class="subtitle">
+      Aaj ka din sirf aapke naam hai... ❤️<br>
+      A little midnight surprise, made with lots of love. 🫶
+    </p>
+
+    <button class="open-btn" onclick="openLetter()">
+      💌 Open Your Special Letter
+    </button>
+  </section>
+
+  <article class="message" id="letter">
+    <h2>For My Birthday Queen 👑</h2>
+
+    <p>
+      <b>Devi Jiii 🌸💖,</b><br>
+      Pata nahi main aapko kitni baar thank you bolun,
+      lekin aaj is special moment par dil se bas itna kehna
+      chahta hu ki meri life mein aapki presence ek blessing
+      se kam nahi hai. 🤗💖
+    </p>
+
+    <p>
+      Aapne shayad notice bhi na kiya ho, lekin aapki wajah
+      se bahut baar mere boring din ache ban gaye, bahut baar
+      bina wajah smile aa gayi, aur bahut saari memories bani
+      jo hamesha mere saath rahengi. 🌸✨
+    </p>
+
+    <p>
+      Aaj jab clock ne 12 bajaye hain, meri sabse pehli dua
+      aapke liye hai... 🤲💫
+    </p>
+
+    <div class="wishes">
+      <p>💖 May every tear in your life be replaced with happiness.</p>
+      <p>🌷 May every dream in your heart find its way to reality.</p>
+      <p>❤️ May you always be surrounded by love, peace and people who truly value you.</p>
+      <p>🌙 May your beautiful smile never fade, no matter what life brings.</p>
+    </div>
+
+    <p>
+      <b>Devi Jiii 🌸,</b><br>
+      Aap un logon mein se hain jinke liye words kabhi
+      enough nahi hote. 🥹❤️
+    </p>
+
+    <p>
+      Aur agar aaj mujhe ek wish maangne ka mauka mile,
+      toh main sirf itna maangunga ki...
+    </p>
+
+    <div class="wishes">
+      <p>💫 Aap hamesha khush rahein.</p>
+      <p>💫 Aap hamesha sehatmand rahein.</p>
+      <p>💫 Aapko kabhi kisi cheez ki kami na ho.</p>
+      <p>💫 Aur aapki zindagi mein itni khushiyan aayein ki unhe gin pana mushkil ho jaaye. 🌷👑</p>
+    </div>
+
+    <p><b>Thank you for being you. ❤️</b></p>
+
+    <p>
+      Thank you for every smile 😊<br>
+      Thank you for every memory 📸<br>
+      Thank you for every conversation 💫<br>
+      And thank you for being such a wonderful part of my life. 🌸🫶
+    </p>
+
+    <div class="flower">🌸 🌷 💖 🌷 🌸</div>
+
+    <h2 style="font-size:34px">
+      Happy Birthday, Madam Jiii! 👑🌷
+    </h2>
+
+    <p class="signature">
+      🌸💖 Happy Birthday, Chhoti Chitrani Sa! 💖🌸
+    </p>
+
+    <p class="signature">
+      🎂✨ Happy Birthday To The Most Beautiful Soul! ✨🎂
+    </p>
+
+    <p>
+      May this new chapter of your life be filled with endless
+      happiness, unforgettable memories, success, peace,
+      laughter and everything your heart secretly wishes for.
+      💝🌙✨
+    </p>
+
+    <p>
+      <b>Enjoy your day, Birthday Queen 👑💖</b><br>
+      Because today isn't just another day...
+    </p>
+
+    <p style="text-align:center;font-weight:600;color:#a34e86">
+      Today is the day the world got blessed with YOU. 🥹❤️🌸✨
+    </p>
+
+    <div class="flower">🎂🥳👑🌷💖🫶✨🌙💫💕🎉🤗🌸💝❤️</div>
+
+    <button class="flower-btn" onclick="showerFlowers()">
+      🌸 Send You A Shower Of Love 🌸
+    </button>
+
+    <p id="secret" style="display:none;text-align:center;color:#a34e86;font-weight:600;margin-top:22px">
+      💌 One last thing, Devi Jiii...<br><br>
+      No matter how many birthdays come and go,
+      I hope life always gives you reasons to smile.
+      Aap hamesha special rahengi. ❤️🌷👑<br><br>
+      Once again, Happy Birthday! 🥹💖✨
+    </p>
+
+    <button class="flower-btn" onclick="revealSecret()">
+      🎁 One Last Surprise
+    </button>
+  </article>
+
+  <footer class="footer">
+    Made with lots of love, just for you. 💗<br>
+    For Devi Jiii · Your special day begins at midnight. 🌙
+  </footer>
+</main>
+
+<script>
+const sky = document.getElementById("sky");
+
+// Create twinkling stars
+for (let i = 0; i < 45; i++) {
+  const star = document.createElement("span");
+  star.className = "star";
+  star.textContent = Math.random() > 0.5 ? "✦" : "·";
+  star.style.left = Math.random() * 100 + "%";
+  star.style.top = Math.random() * 100 + "%";
+  star.style.fontSize = (10 + Math.random() * 14) + "px";
+  star.style.animationDelay = Math.random() * 3 + "s";
+  sky.appendChild(star);
+}
+
+// Floating flowers and hearts
+function makeFloat() {
+  const item = document.createElement("span");
+  item.className = "float";
+
+  const emojis = ["🌸", "💖", "✨", "🌷", "💕", "🦋"];
+  item.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (15 + Math.random() * 20) + "px";
+  item.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+  document.body.appendChild(item);
+  setTimeout(() => item.remove(), 10000);
+}
+
+setInterval(makeFloat, 650);
+
+function openLetter() {
+  const letter = document.getElementById("letter");
+  letter.classList.add("show");
+
+  document.querySelector(".open-btn").textContent =
+    "💖 Your Special Letter Is Open";
+
+  for (let i = 0; i < 22; i++) {
+    setTimeout(makeFloat, i * 100);
+  }
+
+  setTimeout(() => {
+    letter.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 150);
+}
+
+function showerFlowers() {
+  for (let i = 0; i < 45; i++) {
+    setTimeout(makeFloat, i * 65);
+  }
+}
+
+function revealSecret() {
+  const secret = document.getElementById("secret");
+  secret.style.display = "block";
+  secret.scrollIntoView({ behavior: "smooth", block: "center" });
+
+  for (let i = 0; i < 25; i++) {
+    setTimeout(makeFloat, i * 90);
+  }
+}
+</script>
+</body>
+</html>
